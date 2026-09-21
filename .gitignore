@@ -1,7 +1,0 @@
-node_modules/
-.env
-db/tblc.db
-db/tblc.db-journal
-db/tblc.db-wal
-db/tblc.db-shm
-.DS_Store
