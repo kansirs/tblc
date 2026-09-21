@@ -77,6 +77,16 @@ to CSV from the admin dashboard).
 
 ## Deploying it live
 
+⚠️ This project pins Node to version 20 (via `.node-version` and
+`package.json`'s `engines` field) on purpose — `better-sqlite3` (the
+database) ships pre-built binaries for stable/LTS Node versions, but not
+for very new ones. If a host ignores the pin and builds on a newer Node
+anyway, `npm install` will fail trying to compile `better-sqlite3` from
+source. If you ever see a wall of `npm error` output mentioning
+`node-gyp`, `make`, or `v8::`, this is almost always the cause — on
+Render, you can force it by also setting an environment variable
+`NODE_VERSION` to `20.18.1` in the dashboard.
+
 Any Node.js host works. Two straightforward, inexpensive options:
 
 **Render.com** (recommended if you want simplicity)
