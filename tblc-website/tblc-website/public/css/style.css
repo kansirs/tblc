@@ -233,7 +233,8 @@ textarea:focus-visible {
   inset: 0;
   background-size: cover;
   background-position: center 65%;
-  opacity: 0.34;
+  opacity: 0.55;
+  display: none;
 }
 .hero-video {
   position: absolute;
@@ -242,16 +243,17 @@ textarea:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center 65%;
-  opacity: 0.34;
+  opacity: 0.55;
 }
 @media (max-width: 760px) {
+  .hero-photo { display: block; }
   .hero-video { display: none; }
 }
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, var(--pine) 38%, rgba(22, 48, 42, 0.42) 75%, rgba(22, 48, 42, 0.15) 100%);
+  background: linear-gradient(280deg, var(--pine) 38%, rgba(22, 48, 42, 0.42) 75%, rgba(22, 48, 42, 0.15) 100%);
   pointer-events: none;
 }
 .hero-stripes {
